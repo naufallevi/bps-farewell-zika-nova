@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { Howl } from 'howler';
-import { Music2, VolumeX } from 'lucide-react';
+import { VolumeX } from 'lucide-react';
+
+declare global {
+  interface Window {
+    playBGM?: () => void;
+  }
+}
 
 export default function MusicToggle() {
   const [on, setOn] = useState(false);
@@ -13,13 +19,40 @@ export default function MusicToggle() {
       volume: 0.35,
       html5: true,
     });
+
+    // Fungsi global untuk memutar lagu dari luar komponen
+    window.playBGM = () => {
+      if (soundRef.current && !soundRef.current.playing()) {
+        soundRef.current.play();
+        setOn(true);
+        // Kabari seluruh aplikasi kalau lagu sudah nyala
+        window.dispatchEvent(new Event('bgm-started'));
+      }
+    };
+
+    // Dengarkan kalau ada komponen lain (misal Hero) yang menyalakan lagu
+    const handleBgmStarted = () => setOn(true);
+    window.addEventListener('bgm-started', handleBgmStarted);
+
+    return () => {
+      soundRef.current?.unload();
+      delete window.playBGM;
+      window.removeEventListener('bgm-started', handleBgmStarted);
+    };
   }, []);
 
   const toggle = () => {
     const s = soundRef.current;
     if (!s) return;
-    if (on) { s.pause(); setOn(false); }
-    else { s.play(); setOn(true); }
+    if (on) { 
+      s.pause(); 
+      setOn(false); 
+    } else { 
+      s.play(); 
+      setOn(true); 
+      // Sinkronisasi kalau dinyalakan lewat tombol manual
+      window.dispatchEvent(new Event('bgm-started'));
+    }
   };
 
   return (

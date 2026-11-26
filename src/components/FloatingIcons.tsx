@@ -7,7 +7,7 @@ export default function FloatingIcons() {
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
       {icons.map((Icon, i) => {
-        const top = 10 + (i * 15) % 70;
+        const top = 11 + (i * 15) % 70;
         const left = (i * 23) % 90;
         const dur = 12 + (i % 4) * 3;
         const delay = i * 0.7;

@@ -25,7 +25,7 @@ export default function Loader({ onDone }: { onDone: () => void }) {
       transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1] }}
       className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-bps-navy text-white"
     >
-      <div className="mb-6 font-display text-xl tracking-wide text-white/70">Menghitung data kenangan...</div>
+      <div className="mb-14 font-display text-xl tracking-wide text-white/70">Menghitung data kenangan...</div>
       <div className="flex h-40 items-end gap-2" aria-hidden>
         {[1, 2, 3, 4, 5, 6, 7].map((i) => (
           <motion.div

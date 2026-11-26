@@ -6,7 +6,8 @@ import { PROFILES, INTERNSHIP } from '../data/config';
 import { scrollToSection } from '../hooks/useLenis';
 import FloatingIcons from '../components/FloatingIcons';
 
-export default function Hero() {
+// Tambahkan prop onStart
+export default function Hero({ onStart }: { onStart: () => void }) {
   const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,7 +17,6 @@ export default function Hero() {
     });
   }, []);
 
-  // Tilt 3D mengikuti mouse
   useEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
@@ -32,6 +32,15 @@ export default function Hero() {
     window.addEventListener('mousemove', onMove);
     return () => window.removeEventListener('mousemove', onMove);
   }, []);
+
+  const handleStart = () => {
+    // 1. Nyalakan musik
+    window.playBGM?.(); 
+    // 2. Buka kunci scroll
+    onStart();
+    // 3. Scroll ke section berikutnya
+    setTimeout(() => scrollToSection('countdown'), 100);
+  };
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center overflow-hidden px-5">
@@ -49,20 +58,23 @@ export default function Hero() {
           Kenang-kenangan dari BPS Kota Pekalongan
         </motion.div>
 
-        <h1 className="font-display text-5xl font-semibold leading-[1.05] md:text-7xl lg:text-8xl">
-          {'Terima Kasih,'.split(' ').map((w, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35 + i * 0.12, duration: 0.7, ease: 'easeOut' }}
-              className="mr-3 inline-block"
-            >{w}</motion.span>
-          ))}
-          <br />
-          <span className="bg-gradient-to-r from-bps-blue via-bps-orange to-bps-green bg-clip-text text-transparent">
-            Zika & Nova
-          </span>
+        <h1 className="font-display text-5xl font-semibold leading-tight md:text-7xl lg:text-8xl">
+          <div className="mb-2 flex flex-wrap justify-center gap-x-3 gap-y-1">
+            {'Terima Kasih,'.split(' ').map((w, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.35 + i * 0.12, duration: 0.7, ease: 'easeOut' }}
+                className="inline-block whitespace-nowrap"
+              >{w}</motion.span>
+            ))}
+          </div>
+          <div className="relative">
+            <span className="bg-gradient-to-r from-bps-blue via-bps-orange to-bps-green bg-clip-text text-transparent whitespace-nowrap">
+              Zika & Nova
+            </span>
+          </div>
         </h1>
 
         <motion.p
@@ -101,7 +113,7 @@ export default function Hero() {
           transition={{ delay: 1.6 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
-          onClick={() => scrollToSection('countdown')}
+          onClick={handleStart}
           className="group mt-14 inline-flex items-center gap-2 rounded-full bg-bps-navy px-8 py-4 font-medium text-white shadow-soft transition dark:bg-white dark:text-bps-navy"
         >
           Mulai Perjalanan

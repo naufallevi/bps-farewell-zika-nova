@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useLenis } from './hooks/useLenis';
-import Cursor from './components/Cursor';
 import Navbar from './components/Navbar';
 import ScrollProgress from './components/ScrollProgress';
 import EasterEgg from './components/EasterEgg';
@@ -19,14 +18,21 @@ import Outro from './sections/Outro';
 export default function App() {
   useLenis();
   const [loading, setLoading] = useState(true);
+  const [isLocked, setIsLocked] = useState(true); // Kunci scroll di awal
 
   useEffect(() => {
-    document.body.style.overflow = loading ? 'hidden' : '';
-  }, [loading]);
+    // Kunci scroll jika sedang loading ATAU sedang di-lock
+    if (loading || isLocked) {
+      document.body.style.overflow = 'hidden';
+      if ((window as any).__lenis) (window as any).__lenis.stop();
+    } else {
+      document.body.style.overflow = '';
+      if ((window as any).__lenis) (window as any).__lenis.start();
+    }
+  }, [loading, isLocked]);
 
   return (
     <div className="grain relative">
-      <Cursor />
       <AnimatePresence>{loading && <Loader onDone={() => setLoading(false)} />}</AnimatePresence>
 
       {!loading && (
@@ -35,7 +41,8 @@ export default function App() {
           <Navbar />
           <EasterEgg />
           <main>
-            <Hero />
+            {/* Kirim prop onStart untuk membuka lock */}
+            <Hero onStart={() => setIsLocked(false)} />
             <Countdown />
             <Profiles />
             <Timeline />

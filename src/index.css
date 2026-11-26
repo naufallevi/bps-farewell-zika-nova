@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-blue: #0B5CAB;
+  --color-navy: #0A2540;
+  --color-orange: #F59E0B;
+  --color-green: #22C55E;
+  --color-cream: #FDF6EC;
+  --color-bg: #FDF6EC;
+  --color-text: #0A2540;
+  --color-card: rgba(255, 255, 255, 0.7);
+  --color-border: rgba(10, 37, 64, 0.08);
+}
+
+.dark {
+  --color-bg: #0A1626;
+  --color-text: #E7EEF7;
+  --color-card: rgba(15, 30, 50, 0.65);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-cream: #0F2233;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  transition: background-color .4s ease, color .4s ease;
+}
+
+/* Grain overlay halus */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  animation: grain 8s steps(4) infinite;
+}
+
+/* Gradient mesh background */
+.mesh-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(45% 55% at 15% 20%, rgba(11,92,171,0.35), transparent 60%),
+    radial-gradient(40% 45% at 85% 30%, rgba(245,158,11,0.28), transparent 60%),
+    radial-gradient(45% 50% at 50% 90%, rgba(34,197,94,0.20), transparent 60%);
+  filter: blur(60px);
+  animation: meshMove 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes meshMove {
+  0%   { transform: scale(1)   translate(0,0); }
+  100% { transform: scale(1.1) translate(2%, -2%); }
+}
+
+/* Batik pattern subtle */
+.batik {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(11,92,171,0.08) 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(245,158,11,0.08) 2px, transparent 3px),
+    radial-gradient(circle at 40% 80%, rgba(34,197,94,0.08) 2px, transparent 3px);
+  background-size: 60px 60px, 80px 80px, 100px 100px;
+}
+
+/* Custom cursor hiding (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor, body.custom-cursor * { cursor: none !important; }
+}
+
+/* Glass card */
+.glass {
+  background: var(--color-card);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid var(--color-border);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .mesh-bg, .grain::before { animation: none !important; }
+}
+
+::selection { background: var(--color-orange); color: var(--color-navy); }

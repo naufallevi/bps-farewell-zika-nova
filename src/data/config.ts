@@ -21,9 +21,9 @@ export const PROFILES: Profile[] = [
   {
     id: "zika",
     name: "Zika",
-    fullName: "Zahra Inka Kamilah",
+    fullName: "Zika Fahrina Dinana",
     role: "Magang Statistik Sosial",
-    campus: "Universitas Diponegoro · Statistika",
+    campus: "Universitas Diponegoro · Ekonomi Syariah",
     photo: "/images/zika.webp",
     initial: "Z",
     gradient: "from-[#0B5CAB] to-[#22C55E]",
@@ -35,9 +35,9 @@ export const PROFILES: Profile[] = [
   {
     id: "nova",
     name: "Nova",
-    fullName: "Nova Annisa Rahma",
+    fullName: "Nova Safitri",
     role: "Magang Neraca Wilayah",
-    campus: "Politeknik Statistika STIS · Komputasi Statistik",
+    campus: "UIN K.H Abdurrahman Wahid Pekalongan · Ekonomi Syariah",
     photo: "/images/nova.webp",
     initial: "N",
     gradient: "from-[#F59E0B] to-[#0B5CAB]",
@@ -49,9 +49,9 @@ export const PROFILES: Profile[] = [
 ];
 
 export const INTERNSHIP = {
-  startDate: "2025-01-06",
-  endDate: "2025-06-30", // ganti sesuai tanggal hari terakhir
-  periodLabel: "Januari – Juni 2025",
+  startDate: "2026-10-05",
+  endDate: "2026-11-27",
+  periodLabel: "Oktober – November 2026",
   place: "BPS Kota Pekalongan",
 };
 
@@ -117,10 +117,10 @@ export type GalleryItem = {
 };
 
 export const GALLERY: GalleryItem[] = [
-  { id: "g1", src: "/images/gallery-1.webp", caption: "Selfie pagi sebelum data masuk", category: "Bareng Tim" },
-  { id: "g2", src: "/images/gallery-2.webp", caption: "Zika mode fokus", category: "Zika" },
-  { id: "g3", src: "/images/gallery-3.webp", caption: "Nova dan mic keramat rapat", category: "Nova" },
-  { id: "g4", src: "/images/gallery-4.webp", caption: "Survei pasar, gerah tapi senang", category: "Kegiatan" },
+  { id: "g1", src: "/images/gallery-1.jpg", caption: "Selfie pagi sebelum data masuk", category: "Bareng Tim" },
+  { id: "g2", src: "/images/gallery-2.jpg", caption: "Zika mode fokus", category: "Zika" },
+  { id: "g3", src: "/images/gallery-3.jpg", caption: "Nova dan mic keramat rapat", category: "Nova" },
+  { id: "g4", src: "/images/gallery-4.jpg", caption: "Survei pasar, gerah tapi senang", category: "Kegiatan" },
   {
     id: "g5",
     src: "/images/gallery-5.webp",

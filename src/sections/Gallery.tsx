@@ -1,9 +1,33 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ImageOff } from 'lucide-react';
 import { GALLERY } from '../data/config';
 
+// const CATS = ['Semua', 'Zika', 'Nova', 'Bareng Tim', 'Kegiatan'] as const;
 const CATS = ['Semua', 'Zika', 'Nova', 'Bareng Tim', 'Kegiatan'] as const;
+
+// Komponen kecil untuk gambar dengan fallback jika error
+function GalleryImage({ src, alt, className }: { src: string; alt: string; className?: string }) {
+  const [error, setError] = useState(false);
+
+  if (error) {
+    return (
+      <div className={`flex h-full w-full items-center justify-center bg-gradient-to-br from-bps-blue/20 to-bps-orange/20 ${className ?? ''}`}>
+        <ImageOff className="text-black/30 dark:text-white/30" size={48} />
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setError(true)}
+      className={`h-full w-full object-cover ${className ?? ''}`}
+    />
+  );
+}
 
 export default function Gallery() {
   const [cat, setCat] = useState<(typeof CATS)[number]>('Semua');
@@ -25,7 +49,7 @@ export default function Gallery() {
         viewport={{ once: true }}
         className="text-center font-display text-4xl md:text-5xl"
       >Galeri Kenangan</motion.h2>
-
+{/* 
       <div className="mt-8 flex flex-wrap justify-center gap-2">
         {CATS.map((c) => (
           <button
@@ -34,7 +58,7 @@ export default function Gallery() {
             className={`rounded-full px-4 py-2 text-sm transition ${cat === c ? 'bg-bps-blue text-white' : 'glass hover:bg-bps-blue/10'}`}
           >{c}</button>
         ))}
-      </div>
+      </div> */}
 
       <div className="mt-10 columns-2 gap-4 md:columns-3">
         {items.map((g, i) => (
@@ -42,13 +66,11 @@ export default function Gallery() {
             key={g.id}
             layoutId={`photo-${g.id}`}
             onClick={() => setOpenIdx(i)}
-            className="relative mb-4 block w-full overflow-hidden rounded-2xl"
+            className="relative mb-4 block w-full overflow-hidden rounded-2xl bg-black/5 dark:bg-white/5"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="aspect-[4/5] w-full bg-gradient-to-br from-bps-blue/30 to-bps-orange/30">
-              <div className="flex h-full items-center justify-center text-4xl font-display text-white/60">
-                {g.caption[0]}
-              </div>
+            <div className="aspect-[4/5] w-full">
+              <GalleryImage src={g.src} alt={g.caption} />
             </div>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-left text-sm text-white">
               {g.caption}
@@ -74,8 +96,15 @@ export default function Gallery() {
             <button aria-label="Berikutnya" className="absolute right-4 rounded-full bg-white/10 p-3 text-white" onClick={(e) => { e.stopPropagation(); next(); }}>
               <ChevronRight />
             </button>
-            <motion.div layoutId={`photo-${items[openIdx].id}`} className="max-h-[80vh] max-w-3xl overflow-hidden rounded-3xl bg-gradient-to-br from-bps-blue to-bps-orange">
-              <div className="flex aspect-[4/5] w-full items-center justify-center text-white/70" style={{ padding: '10vh 5vw' }}>
+            <motion.div
+              layoutId={`photo-${items[openIdx].id}`}
+              className="max-h-[80vh] max-w-3xl overflow-hidden rounded-3xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex aspect-[4/5] w-full items-center justify-center" style={{ maxHeight: '80vh' }}>
+                <GalleryImage src={items[openIdx].src} alt={items[openIdx].caption} className="rounded-3xl" />
+              </div>
+              <div className="bg-black/60 px-4 py-2 text-center text-sm text-white">
                 {items[openIdx].caption}
               </div>
             </motion.div>

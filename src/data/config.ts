@@ -23,7 +23,7 @@ export const PROFILES: Profile[] = [
     name: "Zika",
     fullName: "Zika Fahrina Dinana",
     role: "Ruang PST",
-    campus: "Universitas Diponegoro · Ekonomi Syariah",
+    campus: "UIN K.H Abdurrahman Wahid Pekalongan · Ekonomi Syariah",
     photo: "/images/zika.webp",
     initial: "Z",
     gradient: "from-[#0B5CAB] to-[#22C55E]",

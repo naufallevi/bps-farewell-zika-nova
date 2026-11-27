@@ -22,29 +22,29 @@ export const PROFILES: Profile[] = [
     id: "zika",
     name: "Zika",
     fullName: "Zika Fahrina Dinana",
-    role: "Magang Statistik Sosial",
+    role: "Ruang PST",
     campus: "Universitas Diponegoro · Ekonomi Syariah",
     photo: "/images/zika.webp",
     initial: "Z",
     gradient: "from-[#0B5CAB] to-[#22C55E]",
-    funFact: "Bisa nebak angka BPS sebelum di-print, tapi masih suka salah pilih menu di kantin.",
-    impression: "Orangnya kalem tapi kalau ngoding VBA Excel bisa mode silat.",
-    secretRole: "Ratu Pivot Table & penyelamat deadline H-1.",
-    quote: '"Data itu bukan angka, dia cerita."',
+    funFact: "Jago ngeprint wkwkwk",
+    impression: "Fatimah Azzahra wanna be",
+    secretRole: "Multi talent tugas kantor, bisa jadi MC, bisa jadi tukang print, bisa jadi tukang ngobrol.",
+    quote: '"-"',
   },
   {
     id: "nova",
     name: "Nova",
     fullName: "Nova Safitri",
-    role: "Magang Neraca Wilayah",
+    role: "Ruang Teknis",
     campus: "UIN K.H Abdurrahman Wahid Pekalongan · Ekonomi Syariah",
     photo: "/images/nova.webp",
     initial: "N",
     gradient: "from-[#F59E0B] to-[#0B5CAB]",
-    funFact: 'Pernah ketiduran pas rapat, bangun-bangun langsung nyebut "siap, Pak!"',
-    impression: "Sumber energi pagi hari, senyumnya bisa ngisi ulang gelas kopi kami.",
-    secretRole: "Direktur Humas dadakan & MC acara kantor tanpa mic.",
-    quote: '"Yang penting senang, yang penting tepat waktu."',
+    funFact: 'Lucu dan tinggi"',
+    impression: "Selalu ceria",
+    secretRole: "Pekerja diam-diam",
+    quote: '"-"',
   },
 ];
 
@@ -56,11 +56,11 @@ export const INTERNSHIP = {
 };
 
 export const STATS = [
-  { label: "Gelas kopi diminum", value: 214, suffix: " gelas", emoji: "☕" },
-  { label: "File Excel dibuka", value: 1024, suffix: " kali", emoji: "📊" },
-  { label: 'Kali bilang "siap, Pak/Bu"', value: 348, suffix: " kali", emoji: "🙋" },
-  { label: "Jam lembur bareng", value: 47, suffix: " jam", emoji: "🌙" },
-  { label: "Kue kotak rapat dimakan", value: 89, suffix: " buah", emoji: "🍩" },
+  { label: "ngisi tumbler", value: 214, suffix: " refill", emoji: "🫗" },
+  { label: "Chrome dibuka", value: 1024, suffix: " kali", emoji: "📊" },
+  { label: 'Bilang "siap, Pak/Bu"', value: 348, suffix: " kali", emoji: "🙋" },
+  { label: "Membuka fasih sm", value: 47, suffix: " jam", emoji: "🌙" },
+  { label: "Ketawa", value: 999, suffix: " ngakak", emoji: "🤣" },
 ];
 
 export type TimelineItem = {
@@ -72,39 +72,39 @@ export type TimelineItem = {
 
 export const TIMELINE: TimelineItem[] = [
   {
-    date: "06 Jan 2025",
+    date: "05 Okt 2026",
     title: "Hari Pertama",
-    desc: "Datang paling pagi, duduk paling pojok, senyum paling sopan. Ibu-ibu kantor langsung sayang.",
+    desc: "Awalnya merasa bingung karena belum ada tugas dan belum tahu harus melakukan apa.",
     image: "/images/timeline-1.webp",
   },
   {
-    date: "20 Jan 2025",
+    date: "06 Okt 2026",
     title: "Kenalan Tim",
-    desc: "Dibawa keliling semua ruangan. Ada yang lupa nama belakang salah satu, tapi sudah saling follow IG.",
+    desc: "Ternyata bertemu dengan tim yang ramah, menyenangkan, dan penuh kejutan.",
     image: "/images/timeline-2.webp",
   },
   {
-    date: "14 Feb 2025",
-    title: "Survei Lapangan",
-    desc: "Pertama kali pegang clipboard di pasar. Pulang bawa data plus 3 jajanan khas Pekalongan.",
+    date: "12 Okt 2026",
+    title: "Tugas Pertama",
+    desc: "Mendapatkan tugas pertama di FASIH, langsung merasakan pengalaman baru, belajar banyak hal, dan tentunya FASIH josjis, mantep!",
     image: "/images/timeline-3.webp",
   },
   {
-    date: "03 Apr 2025",
-    title: "Tugas Pertama",
-    desc: "Rekap data 400 responden dalam semalam. Kopi habis 4 gelas, cerita ini jadi legenda.",
+    date: "Unlimited",
+    title: "Momen Lucu",
+    desc: "Banyak kejadian random, lucu, bahkan absurd selama magang. Mulai dari tingkah dan candaan bapak-ibu pegawai, keseruan mas-mbak magang Kemnaker, kerandoman bapak-bapak di balik layar BPS, hingga insiden terkunci di kamar mandi lantai 4 karena tidak bisa membuka pintu sendiri. 😂",
     image: "/images/timeline-4.webp",
   },
   {
-    date: "12 Mei 2025",
-    title: "Momen Lucu",
-    desc: 'Ada yang nanya "ini tabelnya buat apa?" — jawabannya: "Buat dikasih ke Bu Sri". Kita semua ngakak.',
+    date: "27 November 2026",
+    title: "Hari Terakhir",
+    desc: "Rasanya sedih banget harus mengakhiri semua kebersamaan ini. Bakal kangen mas-mbak magang, candaan dan tingkah random pegawai di ruang teknis maupun PST, serta suasana kantor yang setiap harinya selalu punya cerita. Setelah ini juga bingung harus melangkah ke mana dan kapan bisa merasakan kebersamaan seperti ini lagi. Thank you very much to all of you! ❤️",
     image: "/images/timeline-5.webp",
   },
   {
-    date: "30 Jun 2025",
-    title: "Hari Terakhir",
-    desc: 'Bawa kue, bawa tisu, bawa kata perpisahan. Yang bilang "tidak akan nangis" ternyata paling parah.',
+    date: "Next Day",
+    title: "Fokus Skripsi",
+    desc: "Saatnya membuka lembaran baru, kembali fokus menyelesaikan skripsi, mengejar target yang tertunda, dan mempersiapkan langkah berikutnya. Terima kasih untuk semua kenangan selama magang.",
     image: "/images/timeline-6.webp",
   },
 ];
@@ -117,19 +117,20 @@ export type GalleryItem = {
 };
 
 export const GALLERY: GalleryItem[] = [
-  { id: "g1", src: "/images/gallery-1.jpg", caption: "Selfie pagi sebelum data masuk", category: "Bareng Tim" },
-  { id: "g2", src: "/images/gallery-2.jpg", caption: "Zika mode fokus", category: "Zika" },
-  { id: "g3", src: "/images/gallery-3.jpg", caption: "Nova dan mic keramat rapat", category: "Nova" },
-  { id: "g4", src: "/images/gallery-4.jpg", caption: "Survei pasar, gerah tapi senang", category: "Kegiatan" },
+  { id: "g1", src: "/images/gallery-1.jpg", caption: "🙌", category: "Bareng Tim" },
+  { id: "g2", src: "/images/gallery-2.jpg", caption: "🙌", category: "Bareng Tim" },
+  { id: "g3", src: "/images/gallery-3.jpg", caption: "🙌", category: "Bareng Tim" },
+  { id: "g4", src: "/images/gallery-4.jpg", caption: "🙌", category: "Bareng Tim" },
   {
     id: "g5",
-    src: "/images/gallery-5.webp",
-    caption: "Rapat rutin yang selalu jadi ajang ngakak",
+    src: "/images/gallery-5.jpg",
+    caption: "🙌",
     category: "Bareng Tim",
   },
-  { id: "g6", src: "/images/gallery-6.webp", caption: "Makan siang ke-213", category: "Kegiatan" },
-  { id: "g7", src: "/images/gallery-7.webp", caption: "Zika dan Excel-nya yang legendaris", category: "Zika" },
-  { id: "g8", src: "/images/gallery-8.webp", caption: "Nova, kue kotak, dan senyum bahagia", category: "Nova" },
+  { id: "g6", src: "/images/gallery-6.jpg", caption: "🙌", category: "Bareng Tim" },
+  { id: "g7", src: "/images/gallery-7.jpg", caption: "🙌", category: "Bareng Tim" },
+  { id: "g8", src: "/images/gallery-8.jpg", caption: "🙌", category: "Bareng Tim" },
+  { id: "g9", src: "/images/gallery-9.jpg", caption: "🙌", category: "Bareng Tim" },
 ];
 
 export type QuizQuestion = {
@@ -140,34 +141,23 @@ export type QuizQuestion = {
 
 export const QUIZ: QuizQuestion[] = [
   {
-    q: "Minuman favorit Zika saat lembur?",
-    options: ["Kopi hitam", "Es teh manis", "Matcha latte", "Air putih saja"],
+    q: "Rumah Zika?",
+    options: ["Landungsari", "Medono", "Wiradesa", "Kuripan"],
     answer: 0,
   },
   {
-    q: 'Siapa yang paling sering bilang "siap, Pak!"?',
-    options: ["Zika", "Nova", "Bersama-sama", "Bu Sri"],
+    q: "Rumah Nova?",
+    options: ["Landungsari", "Medono", "Wiradesa", "Kuripan"],
+    answer: 3,
+  },
+  {
+    q: "Kapan tanggal mereka masuk magang?",
+    options: ["04", "05", "06", "07"],
     answer: 1,
   },
-  { q: "Aplikasi yang paling sering dibuka Nova?", options: ["TikTok", "Excel", "Notepad", "Adobe XD"], answer: 1 },
   {
-    q: "Jajanan wajib saat survei pasar Pekalongan?",
-    options: ["Sate kuda", "Tauto", "Wingko", "Semua benar"],
-    answer: 3,
-  },
-  {
-    q: "Kebiasaan Zika yang bikin tim gemas?",
-    options: ['Menyebut data "cerita"', "Selalu bawa tumbler", "Diam-diam bikin pivot table", "Semua benar"],
-    answer: 3,
-  },
-  {
-    q: "Kalau Nova jadi BPS-1 sehari, dia bakal...?",
-    options: ["Adakan senam pagi", "Bagi-bagi kue", "Bikin kopi gratis", "Semua benar"],
-    answer: 3,
-  },
-  {
-    q: "Kalimat yang paling sering diucapkan berdua?",
-    options: ['"Nanti dulu ya"', '"Siap laksanakan!"', '"Kita bisa!"', '"Error lagi"'],
+    q: "Kapan tanggal mereka selesai magang?",
+    options: ["25", "26", "27", "28"],
     answer: 2,
   },
 ];
@@ -176,67 +166,139 @@ export const LETTER = {
   title: "Surat untuk Zika & Nova",
   body: `Hai Zika, hai Nova...
 
-Enam bulan bukan waktu yang lama untuk sebuah pertemuan, tapi cukup untuk bikin kami di BPS Kota Pekalongan jadi lebih ramai, lebih berwarna, dan sedikit lebih berisik di ruangan sebelah.
+Dua bulan bukan waktu yang lama untuk sebuah pertemuan, tapi cukup untuk bikin kami (Peserta Magang Lain) di BPS Kota Pekalongan jadi lebih ramai, lebih berwarna, dan sedikit lebih berisik di ruangan.
 
-Terima kasih sudah jadi bagian dari tim ini. Terima kasih untuk setiap "siap, Pak/Bu" yang tulus (walau kadang sambil ngantuk), untuk setiap tabel yang rapi, untuk kopi yang bergantian beli, dan untuk tawa yang selalu kamu bawa masuk kantor tiap pagi.
+Terima kasih sudah jadi bagian dari tim ini. Terima kasih untuk setiap "siap, Pak/Bu" yang tulus, untuk setiap tabel yang rapi, untuk refill air yang bergantian, dan untuk tawa yang selalu kamu bawa masuk kantor tiap pagi.
 
-Kami akan kangen suara ketikan Excel kalian, kangen pertanyaan-pertanyaan polos yang ternyata jawabannya jadi diskusi panjang, kangen juga saat kalian berdua kompak bilang "bentar lagi selesai" padahal masih ngopi di pantry.
+Kami akan kangen suara ketikan keyboard kalian, kangen pertanyaan-pertanyaan polos yang ternyata jawabannya jadi diskusi panjang, kangen juga saat kalian berdua kompak bilang padahal masih santuy.
 
 Di luar sana banyak data yang harus diceritakan, banyak tabel yang harus dirapikan, dan banyak mimpi yang menunggu untuk dihitung. Semoga langkah kalian selalu diberkahi, semoga ilmu yang didapat di sini jadi bekal yang bermanfaat, dan semoga kalian tetap jadi orang-orang hangat seperti yang kami kenal.
 
-Kalau kangen, pintu kantor ini selalu terbuka. Kalau lelah, ingat ada kami yang dulu pernah lembur bareng kalian. Kalau butuh referensi kerja, kami siap. Kalau butuh cerita, kami lebih siap lagi.
+Kalau kangen, nomor hp kami ini selalu terbuka. Kalau lelah, ingat ada ibadah kepada ALlah SWT. yang bisa memberikan ketenangan. Kalau butuh referensi kerja, kami siap. Kalau butuh cerita, kami lebih siap lagi.
 
 Selamat jalan, Zika. Selamat jalan, Nova.
 Sampai jumpa di kesuksesan kalian selanjutnya.
 
 Dengan hangat,
-Tim BPS Kota Pekalongan`,
+Peserta Magang BPS Kota Pekalongan`,
 };
 
 export const INITIAL_MESSAGES = [
   {
     id: "m1",
-    name: "Bu Sri",
+    name: "Cristiano Ronaldo",
     to: "Keduanya",
-    text: "Semoga sukses selalu ya anak-anak. Jangan lupa mampir kalau lewat!",
+    text: "Sukses bukan kebetulan. Itu hasil kerja keras, dedikasi, dan semangat pantang menyerah. Keep pushing your limits!",
     color: "yellow",
-    emoji: "❤️",
-    reactions: { "❤️": 5, "👏": 2, "😂": 1 },
+    emoji: "🏆",
+    reactions: { "❤️": 8, "👏": 10, "😂": 2 },
   },
   {
     id: "m2",
-    name: "Pak Andi",
+    name: "Taylor Swift",
     to: "Zika",
-    text: "Terima kasih sudah bantu urus data. Excel-mu lebih rapi dari meja saya.",
+    text: "Setiap perjalanan punya cerita, dan setiap cerita punya kenangan. Jangan pernah berhenti menulis bab baru dalam hidupmu!",
     color: "blue",
-    emoji: "👏",
-    reactions: { "❤️": 3, "👏": 6, "😂": 0 },
+    emoji: "❤️",
+    reactions: { "❤️": 10, "👏": 5, "😂": 2 },
   },
   {
     id: "m3",
-    name: "Bu Rina",
+    name: "MrBeast",
     to: "Nova",
-    text: "Energimu bikin rapat pagi nggak ngantuk. Ditunggu cerita-cerita barunya!",
+    text: "Kalian sudah menyelesaikan satu tantangan besar! Sekarang waktunya naik level. Siapa tahu tantangan berikutnya jauh lebih seru!",
     color: "pink",
-    emoji: "😂",
-    reactions: { "❤️": 4, "👏": 1, "😂": 5 },
+    emoji: "🎉",
+    reactions: { "❤️": 5, "👏": 8, "😂": 7 },
   },
   {
     id: "m4",
-    name: "Tim Sosial",
+    name: "Lionel Messi",
     to: "Keduanya",
-    text: "Dua orang yang bikin ruangan sebelah selalu penasaran kenapa kita ketawa.",
+    text: "Kerja sama tim adalah kunci. Teruslah bermain dengan hati, saling mendukung, dan jangan lupa menikmati setiap prosesnya.",
     color: "green",
-    emoji: "🎉",
-    reactions: { "❤️": 7, "👏": 3, "😂": 4 },
+    emoji: "⚽",
+    reactions: { "❤️": 9, "👏": 8, "😂": 1 },
+  },
+  {
+    id: "m5",
+    name: "Albert Einstein",
+    to: "Zika",
+    text: "Jangan takut membuat kesalahan. Yang terpenting adalah terus belajar, karena pengalaman adalah guru terbaik.",
+    color: "yellow",
+    emoji: "💡",
+    reactions: { "❤️": 7, "👏": 9, "😂": 1 },
+  },
+  {
+    id: "m6",
+    name: "Jackie Chan",
+    to: "Nova",
+    text: "Tetap semangat menghadapi tantangan! Hidup memang penuh aksi, kadang jatuh, kadang tertawa, tetapi jangan pernah menyerah!",
+    color: "blue",
+    emoji: "😂",
+    reactions: { "❤️": 6, "👏": 7, "😂": 10 },
+  },
+  {
+    id: "m7",
+    name: "Elon Musk",
+    to: "Keduanya",
+    text: "The future is exciting. Terus berinovasi, berani mencoba hal baru, dan jangan takut berpikir di luar kebiasaan!",
+    color: "pink",
+    emoji: "🚀",
+    reactions: { "❤️": 5, "👏": 10, "😂": 2 },
+  },
+  {
+    id: "m8",
+    name: "Keanu Reeves",
+    to: "Keduanya",
+    text: "Be excellent to each other. Terima kasih sudah menjadi bagian dari perjalanan yang menyenangkan. Semoga dunia mempertemukan kita kembali.",
+    color: "green",
+    emoji: "❤️",
+    reactions: { "❤️": 12, "👏": 6, "😂": 1 },
+  },
+  {
+    id: "m9",
+    name: "Gordon Ramsay",
+    to: "Zika",
+    text: "Excel-nya rapi, pekerjaannya selesai. Finally, some good work! Sekarang silakan menikmati hidup tanpa dikejar deadline!",
+    color: "yellow",
+    emoji: "🔥",
+    reactions: { "❤️": 4, "👏": 7, "😂": 12 },
+  },
+  {
+    id: "m10",
+    name: "Satoru Gojo",
+    to: "Nova",
+    text: "Tenang saja, masa depan kalian sudah pasti cerah. After all, you're the strongest! Jangan lupa mampir lagi!",
+    color: "blue",
+    emoji: "✨",
+    reactions: { "❤️": 10, "👏": 6, "😂": 9 },
+  },
+  {
+    id: "m11",
+    name: "Naruto Uzumaki",
+    to: "Keduanya",
+    text: "Aku tidak akan menarik kembali kata-kataku. Teruslah berjuang meraih impian kalian! Dattebayo!",
+    color: "pink",
+    emoji: "🍥",
+    reactions: { "❤️": 8, "👏": 7, "😂": 5 },
+  },
+  {
+    id: "m12",
+    name: "Steve Jobs",
+    to: "Keduanya",
+    text: "Stay hungry, stay foolish. Jangan pernah berhenti belajar, berkreasi, dan melakukan sesuatu yang benar-benar kalian cintai.",
+    color: "green",
+    emoji: "🍎",
+    reactions: { "❤️": 11, "👏": 9, "😂": 1 },
   },
 ] as const;
 
 export const BADGES = [
   { min: 0, label: "Rekan Kantor Biasa", emoji: "🙂" },
-  { min: 3, label: "Kenalan Baik", emoji: "😊" },
-  { min: 5, label: "Sahabat Sejati", emoji: "🥰" },
-  { min: 7, label: "Legenda BPS", emoji: "👑" },
+  { min: 1, label: "Kenalan Baik", emoji: "😊" },
+  { min: 3, label: "Sahabat Sejati", emoji: "🥰" },
+  { min: 4, label: "Legenda BPS", emoji: "👑" },
 ];
 
 export const COLORS = {

@@ -101,7 +101,7 @@ export default function Profiles() {
       </div>
 
       <div className="mt-16">
-        <h3 className="mb-6 text-center font-display text-2xl">Statistik lucu versi BPS</h3>
+        <h3 className="mb-6 text-center font-display text-2xl">Statistik Kocak</h3>
         <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
           {STATS.map((s, i) => <StatCard key={s.label} stat={s} index={i} />)}
         </div>

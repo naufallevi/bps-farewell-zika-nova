@@ -36,7 +36,7 @@ export default function Navbar() {
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6 }}
-        className="fixed left-1/2 top-4 z-50 hidden -translate-x-1/2 md:block"
+        className="fixed left-1/2 top-6 z-50 hidden -translate-x-1/2 md:block"
       >
         <nav className="glass flex items-center gap-1 rounded-full px-2 py-2 shadow-soft">
           {LINKS.map((l) => (
